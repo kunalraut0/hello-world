@@ -1,3 +1,3 @@
-<h1> Hello, My Name is SHANAZU</h1>
-<h2> MERA KAAM H TIKTOK DEKHNA </h2>
-<h3> MY HUN BANDRI</h3>
+<h1> Hello, My Name is kunal</h1>
+<h2> devops </h2>
+<h3> har har mahadev</h3>
