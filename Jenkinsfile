@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('pull') { 
             steps {
-                git branch: 'main', url: 'https://github.com/kunalraut0/pipeline.git'
+               git 'https://github.com/kunalraut0/hello-world.git'
             }
         }
         
         stage('build') { 
             steps {
-               echo 'build successful'
+               sh 'mvn clean install package'
             }
         } 
         
@@ -21,7 +21,7 @@ pipeline {
         
         stage('deploy') { 
             steps {
-               echo 'deploy successful'
+               deploy adapters: [tomcat8(credentialsId: 'tomcat-2', path: '', url: 'http://43.204.147.173:8080/')], contextPath: '/', war: '**/*.war'
             }
         } 
     }
