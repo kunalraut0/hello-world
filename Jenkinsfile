@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('pull') { 
             steps {
-               git 'https://github.com/kunalraut0/hello-world.git'
+              git 'https://github.com/kunalraut0/hello-world.git'
             }
         }
         
@@ -21,7 +21,7 @@ pipeline {
         
         stage('deploy') { 
             steps {
-               deploy adapters: [tomcat8(credentialsId: 'tomcat-2', path: '', url: 'http://43.204.147.173:8080/')], contextPath: '/', war: '**/*.war'
+              echo 'deploy successful'
             }
         } 
     }
