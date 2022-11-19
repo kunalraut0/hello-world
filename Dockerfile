@@ -1,6 +1,9 @@
-# Pull base image 
-From tomcat:8-jre8 
+FROM tomcat:9-jre8
 
-# Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+RUN yum install openjdk-11 -y
+
+WORKDIR /usr/local/tomcat
+
+COPY ./*.war /usr/local/tomcat/webapps
+
+CMD ["/usr/local/tomcat/bin/catalina.sh","run"]
