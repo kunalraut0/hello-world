@@ -1,6 +1,5 @@
 FROM tomcat:9-jre8
 
-RUN yum install openjdk-11 -y
 
 WORKDIR /usr/local/tomcat
 
